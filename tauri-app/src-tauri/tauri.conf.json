@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicedoc/tauri-schema/main/latest/schema.json",
+  "productName": "Arsenal File Compiler",
+  "version": "2.0.0",
+  "identifier": "com.arsenal.filecompiler",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Arsenal File Compiler",
+        "width": 900,
+        "height": 650,
+        "resizable": true,
+        "fullscreen": false,
+        "minWidth": 700,
+        "minHeight": 500
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "plugins": {
+    "dialog": {},
+    "fs": {
+      "scope": ["**"]
+    }
+  }
+}
